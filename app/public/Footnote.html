@@ -1,32 +1,40 @@
 <!doctype html>
-<link href="/src/style.css" rel="stylesheet" />
-<div class="flex flex-row">
-    <div class="grow">
-        <h1>Contact us</h1>
-        <p class="max-w-96">
-            สถาบันโคเซ็นแห่ง สจล. (อยู่ภายใน
-            สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง) ซอยฉลองกรุง 1
-            แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพฯ 10520
-        </p>
-        <iframe
-            width="425"
-            height="350"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=100.78092187643053%2C13.730117280034777%2C100.78480571508409%2C13.732558680354613&amp;layer=mapnik"
-            style="border: 1px solid black"
-        ></iframe
-        ><br /><small
-            ><a
-                href="https://www.openstreetmap.org/?#map=19/13.731338/100.782864"
-                target="_top"
-                >View Larger Map</a
-            ></small
-        >
-    </div>
-    <div class="flex">
-        <div class="flex-col">
-            <a href="http://www.kosen.kmitl.ac.th/en" target="_top"
-                >Original Site</a
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="flex flex-col sm:flex-row">
+        <div class="grow">
+            <h1 class="font-bold text-2xl">Contact us</h1>
+            <p class="max-w-96 wrap-normal">
+                สถาบันโคเซ็นแห่ง สจล. (อยู่ภายใน
+                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง) ซอยฉลองกรุง 1
+                แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพฯ 10520
+            </p>
+            <iframe
+                class="sm:h-86 h-52 sm:w-md w-auto"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=100.78092187643053%2C13.730117280034777%2C100.78480571508409%2C13.732558680354613&amp;layer=mapnik"
+                style="border: 1px solid black"
+            ></iframe
+            ><br /><small
+                ><a
+                    href="https://www.openstreetmap.org/?#map=19/13.731338/100.782864"
+                    target="_top"
+                    >View Larger Map</a
+                ></small
             >
         </div>
+        <div class="flex">
+            <div class="flex-col sm:mt-0 mt-6">
+                <p class="font-bold text-2xl sm:text-right text-left">Link</p>
+                <a
+                    href="http://www.kosen.kmitl.ac.th/en"
+                    target="_top"
+                    class="sm:text-right text-left"
+                    >Original Site</a
+                >
+            </div>
+        </div>
     </div>
-</div>
+</body>
