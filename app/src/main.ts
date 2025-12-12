@@ -63,9 +63,22 @@ document
   });
 
 document
-  .querySelector<HTMLIFrameElement>("#Subpage")
+  .querySelector<HTMLIFrameElement>("#Contact")
   ?.contentWindow?.addEventListener("resize", () => {
-    var Subpage = document.querySelector<HTMLIFrameElement>("#Subpage")!;
+    var Subpage = document.querySelector<HTMLIFrameElement>("#Contact")!;
+    Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
+  });
+
+document
+  .querySelector<HTMLIFrameElement>("#Structure")
+  ?.contentWindow?.addEventListener("resize", () => {
+    var Subpage = document.querySelector<HTMLIFrameElement>("#Structure")!;
+    Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
+  });
+document
+  .querySelector<HTMLIFrameElement>("#Index")
+  ?.contentWindow?.addEventListener("resize", () => {
+    var Subpage = document.querySelector<HTMLIFrameElement>("#Index")!;
     Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
   });
 
