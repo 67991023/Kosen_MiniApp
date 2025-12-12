@@ -96,7 +96,6 @@ document
 document.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset || document.documentElement.scrollTop;
   var element = document.querySelector<HTMLDivElement>("#Totop")!;
-  console.log(scrollY);
   if (scrollY > 10) {
     element.hidden = false;
     element.style.opacity = Math.min(((scrollY - 10) / 100) * 100, 100) + "%";
