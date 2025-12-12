@@ -6,7 +6,9 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     <iframe src="Navbar.html" id="Navbar" class="min-w-full"></iframe>
   </div>
   <div id="Mainpage" class="p-16 mt-0">
-    <iframe src="Index.html" id="Subpage" class="min-w-full"></iframe>
+    <iframe src="Index.html" id="Index" class="min-w-full"></iframe>
+    <iframe src="Structure.html" id="Structure" class="min-w-full"></iframe>
+    <iframe src="Contact.html" id="Contact" class="min-w-full"></iframe>
   </div>
   <div class="m-8">
    <iframe src="Footnote.html" id="Footnote" class="min-w-full"></iframe>
@@ -22,53 +24,41 @@ document
     var Navbar = document.querySelector<HTMLIFrameElement>("#Navbar")!;
     Navbar.height = Navbar.contentWindow?.document.body.scrollHeight + "px";
     Navbar.contentDocument
-      ?.querySelector<HTMLButtonElement>("#Contact")
-      ?.addEventListener("click", () => {
-        document.querySelector<HTMLDivElement>("#Mainpage")!.innerHTML =
-          `<iframe src="Contact.html" id="Subpage" class="min-w-full"></iframe>`;
-        document
-          .querySelector<HTMLIFrameElement>("#Subpage")
-          ?.contentWindow?.addEventListener("load", () => {
-            var Subpage =
-              document.querySelector<HTMLIFrameElement>("#Subpage")!;
-            Subpage.height =
-              Subpage.contentWindow?.document.body.scrollHeight + "px";
-          });
-      });
-    Navbar.contentDocument
       ?.querySelector<HTMLButtonElement>("#Index")
       ?.addEventListener("click", () => {
-        document.querySelector<HTMLDivElement>("#Mainpage")!.innerHTML =
-          `<iframe src="Index.html" id="Subpage" class="min-w-full"></iframe>`;
-        document
-          .querySelector<HTMLIFrameElement>("#Subpage")
-          ?.contentWindow?.addEventListener("load", () => {
-            var Subpage =
-              document.querySelector<HTMLIFrameElement>("#Subpage")!;
-            Subpage.height =
-              Subpage.contentWindow?.document.body.scrollHeight + "px";
-          });
+        document.querySelector<HTMLIFrameElement>("#Index")!.hidden = false;
+        document.querySelector<HTMLIFrameElement>("#Contact")!.hidden = true;
+        document.querySelector<HTMLIFrameElement>("#Structure")!.hidden = true;
+        var Subpage = document.querySelector<HTMLIFrameElement>("#Index")!;
+        Subpage.height =
+          Subpage.contentWindow?.document.body.scrollHeight + "px";
+      });
+    Navbar.contentDocument
+      ?.querySelector<HTMLButtonElement>("#Contact")
+      ?.addEventListener("click", () => {
+        document.querySelector<HTMLIFrameElement>("#Index")!.hidden = true;
+        document.querySelector<HTMLIFrameElement>("#Contact")!.hidden = false;
+        document.querySelector<HTMLIFrameElement>("#Structure")!.hidden = true;
+        var Subpage = document.querySelector<HTMLIFrameElement>("#Contact")!;
+        Subpage.height =
+          Subpage.contentWindow?.document.body.scrollHeight + "px";
       });
     Navbar.contentDocument
       ?.querySelector<HTMLButtonElement>("#Structure")
       ?.addEventListener("click", () => {
-        document.querySelector<HTMLDivElement>("#Mainpage")!.innerHTML =
-          `<iframe src="Structure.html" id="Subpage" class="min-w-full"></iframe>`;
-        document
-          .querySelector<HTMLIFrameElement>("#Subpage")
-          ?.contentWindow?.addEventListener("load", () => {
-            var Subpage =
-              document.querySelector<HTMLIFrameElement>("#Subpage")!;
-            Subpage.height =
-              Subpage.contentWindow?.document.body.scrollHeight + "px";
-          });
+        document.querySelector<HTMLIFrameElement>("#Index")!.hidden = true;
+        document.querySelector<HTMLIFrameElement>("#Contact")!.hidden = true;
+        document.querySelector<HTMLIFrameElement>("#Structure")!.hidden = false;
+        var Subpage = document.querySelector<HTMLIFrameElement>("#Structure")!;
+        Subpage.height =
+          Subpage.contentWindow?.document.body.scrollHeight + "px";
       });
   });
 
 document
-  .querySelector<HTMLIFrameElement>("#Subpage")
+  .querySelector<HTMLIFrameElement>("#Index")
   ?.contentWindow?.addEventListener("load", () => {
-    var Subpage = document.querySelector<HTMLIFrameElement>("#Subpage")!;
+    var Subpage = document.querySelector<HTMLIFrameElement>("#Index")!;
     Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
   });
 
@@ -104,5 +94,6 @@ document.addEventListener("scroll", () => {
   }
 });
 
-var element = document.querySelector<HTMLDivElement>("#Totop")!;
-element.hidden = true;
+document.querySelector<HTMLDivElement>("#Totop")!.hidden = true;
+document.querySelector<HTMLIFrameElement>("#Contact")!.hidden = true;
+document.querySelector<HTMLIFrameElement>("#Structure")!.hidden = true;
