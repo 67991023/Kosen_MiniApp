@@ -32,6 +32,7 @@ document
         var Subpage = document.querySelector<HTMLIFrameElement>("#Index")!;
         Subpage.height =
           Subpage.contentWindow?.document.body.scrollHeight + "px";
+        window.scrollTo(0, 0);
       });
     Navbar.contentDocument
       ?.querySelector<HTMLButtonElement>("#Contact")
@@ -42,6 +43,7 @@ document
         var Subpage = document.querySelector<HTMLIFrameElement>("#Contact")!;
         Subpage.height =
           Subpage.contentWindow?.document.body.scrollHeight + "px";
+        window.scrollTo(0, 0);
       });
     Navbar.contentDocument
       ?.querySelector<HTMLButtonElement>("#Structure")
@@ -52,6 +54,7 @@ document
         var Subpage = document.querySelector<HTMLIFrameElement>("#Structure")!;
         Subpage.height =
           Subpage.contentWindow?.document.body.scrollHeight + "px";
+        window.scrollTo(0, 0);
       });
   });
 
