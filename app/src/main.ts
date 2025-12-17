@@ -21,18 +21,18 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
 `;
 
 // Apply dark mode on load to main page
-const currentTheme = localStorage.getItem('theme') || 'light';
-if (currentTheme === 'dark') {
-  document.documentElement.classList.add('dark');
+const currentTheme = localStorage.getItem("theme") || "light";
+if (currentTheme === "dark") {
+  document.documentElement.classList.add("dark");
 }
 
 // Listen for theme changes from iframes
-window.addEventListener('message', (event) => {
-  if (event.data.type === 'themeChange') {
-    if (event.data.theme === 'dark') {
-      document.documentElement.classList.add('dark');
+window.addEventListener("message", (event) => {
+  if (event.data.type === "themeChange") {
+    if (event.data.theme === "dark") {
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList. remove('dark');
+      document.documentElement.classList.remove("dark");
     }
   }
 });
@@ -41,8 +41,9 @@ window.addEventListener('message', (event) => {
 setTimeout(() => {
   const totopElement = document.querySelector<HTMLDivElement>("#Totop");
   const contactElement = document.querySelector<HTMLIFrameElement>("#Contact");
-  const structureElement = document.querySelector<HTMLIFrameElement>("#Structure");
-  
+  const structureElement =
+    document.querySelector<HTMLIFrameElement>("#Structure");
+
   if (totopElement) totopElement.hidden = true;
   if (contactElement) contactElement.hidden = true;
   if (structureElement) structureElement.hidden = true;
@@ -52,8 +53,8 @@ document
   .querySelector<HTMLIFrameElement>("#Navbar")
   ?.contentWindow?.addEventListener("load", () => {
     var Navbar = document.querySelector<HTMLIFrameElement>("#Navbar")!;
-    Navbar.height = Navbar.contentWindow?. document.body.scrollHeight + "px";
-    
+    Navbar.height = Navbar.contentWindow?.document.body.scrollHeight + "px";
+
     // HOME BUTTON - Index
     Navbar.contentDocument
       ?.querySelector<HTMLButtonElement>("#Index")
@@ -66,30 +67,30 @@ document
           Subpage.contentWindow?.document.body.scrollHeight + "px";
         window.scrollTo(0, 0);
       });
-    
+
     // Contact Button
     Navbar.contentDocument
       ?.querySelector<HTMLButtonElement>("#Contact")
       ?.addEventListener("click", () => {
         document.querySelector<HTMLIFrameElement>("#Index")!.hidden = true;
         document.querySelector<HTMLIFrameElement>("#Contact")!.hidden = false;
-        document. querySelector<HTMLIFrameElement>("#Structure")!.hidden = true;
+        document.querySelector<HTMLIFrameElement>("#Structure")!.hidden = true;
         var Subpage = document.querySelector<HTMLIFrameElement>("#Contact")!;
         Subpage.height =
-          Subpage.contentWindow?. document.body.scrollHeight + "px";
+          Subpage.contentWindow?.document.body.scrollHeight + "px";
         window.scrollTo(0, 0);
       });
-    
+
     // Structure Button
     Navbar.contentDocument
       ?.querySelector<HTMLButtonElement>("#Structure")
       ?.addEventListener("click", () => {
         document.querySelector<HTMLIFrameElement>("#Index")!.hidden = true;
-        document. querySelector<HTMLIFrameElement>("#Contact")!.hidden = true;
+        document.querySelector<HTMLIFrameElement>("#Contact")!.hidden = true;
         document.querySelector<HTMLIFrameElement>("#Structure")!.hidden = false;
-        var Subpage = document. querySelector<HTMLIFrameElement>("#Structure")!;
+        var Subpage = document.querySelector<HTMLIFrameElement>("#Structure")!;
         Subpage.height =
-          Subpage.contentWindow?.document. body.scrollHeight + "px";
+          Subpage.contentWindow?.document.body.scrollHeight + "px";
         window.scrollTo(0, 0);
       });
   });
@@ -98,64 +99,52 @@ document
   .querySelector<HTMLIFrameElement>("#Index")
   ?.contentWindow?.addEventListener("load", () => {
     var Subpage = document.querySelector<HTMLIFrameElement>("#Index")!;
-    Subpage. height = Subpage.contentWindow?. document.body.scrollHeight + "px";
+    Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
   });
 
 document
   .querySelector<HTMLIFrameElement>("#Contact")
-  ?.contentWindow?. addEventListener("load", () => {
-    var Subpage = document. querySelector<HTMLIFrameElement>("#Contact")!;
-    Subpage.height = Subpage.contentWindow?.document.body. scrollHeight + "px";
-  });
-
-document
-  .querySelector<HTMLIFrameElement>("#Structure")
-  ?.contentWindow?. addEventListener("load", () => {
-    var Subpage = document. querySelector<HTMLIFrameElement>("#Structure")!;
-    Subpage.height = Subpage.contentWindow?.document.body. scrollHeight + "px";
-  });
-
-document
-  .querySelector<HTMLIFrameElement>("#Contact")
-  ?.contentWindow?. addEventListener("resize", () => {
+  ?.contentWindow?.addEventListener("load", () => {
     var Subpage = document.querySelector<HTMLIFrameElement>("#Contact")!;
-    Subpage. height = Subpage.contentWindow?.document.body.scrollHeight + "px";
+    Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
   });
 
 document
   .querySelector<HTMLIFrameElement>("#Structure")
-  ?.contentWindow?. addEventListener("resize", () => {
-    var Subpage = document. querySelector<HTMLIFrameElement>("#Structure")!;
-    Subpage.height = Subpage.contentWindow?.document.body. scrollHeight + "px";
+  ?.contentWindow?.addEventListener("load", () => {
+    var Subpage = document.querySelector<HTMLIFrameElement>("#Structure")!;
+    Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
   });
 
-document
-  .querySelector<HTMLIFrameElement>("#Index")
-  ?.contentWindow?. addEventListener("resize", () => {
-    var Subpage = document. querySelector<HTMLIFrameElement>("#Index")!;
-    Subpage.height = Subpage.contentWindow?.document.body. scrollHeight + "px";
-  });
+window.addEventListener("resize", () => {
+  var Subpage = document.querySelector<HTMLIFrameElement>("#Contact")!;
+  Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
+  var Subpage = document.querySelector<HTMLIFrameElement>("#Structure")!;
+  Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
+  var Subpage = document.querySelector<HTMLIFrameElement>("#Index")!;
+  Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
+});
 
 document
   .querySelector<HTMLIFrameElement>("#Footnote")
   ?.contentWindow?.addEventListener("load", () => {
     var Subpage = document.querySelector<HTMLIFrameElement>("#Footnote")!;
-    Subpage.height = Subpage.contentWindow?. document.body.scrollHeight + "px";
+    Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
   });
 
 document
   .querySelector<HTMLIFrameElement>("#Footnote")
-  ?.contentWindow?. addEventListener("resize", () => {
-    var Subpage = document. querySelector<HTMLIFrameElement>("#Footnote")!;
-    Subpage.height = Subpage.contentWindow?.document. body.scrollHeight + "px";
+  ?.contentWindow?.addEventListener("resize", () => {
+    var Subpage = document.querySelector<HTMLIFrameElement>("#Footnote")!;
+    Subpage.height = Subpage.contentWindow?.document.body.scrollHeight + "px";
   });
 
-document. addEventListener("scroll", () => {
+document.addEventListener("scroll", () => {
   const scrollY = window.pageYOffset || document.documentElement.scrollTop;
   var element = document.querySelector<HTMLDivElement>("#Totop")!;
   if (scrollY > 10) {
     element.hidden = false;
-    element.style.opacity = Math.min(((scrollY - 10) / 100) * 100, 100) + "%";
+    element.style.opacity = Math.min(((scrollY - 10) / 200) * 100, 100) + "%";
   } else {
     element.hidden = true;
   }
