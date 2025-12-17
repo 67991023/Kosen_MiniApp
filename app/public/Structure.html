@@ -1,5 +1,218 @@
-<!doctype html>
-<link href="/src/style.css" rel="stylesheet" />
-<div class="m-0">
-    <h1 class="font-bold">Structure</h1>
-</div>
+<!  doctype html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/style.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-gray-800 dark:text-gray-100 mb-4">
+                <span class="text-blue-600 dark:text-blue-400">หลักสูตร</span>
+            </h1>
+            <p class="text-xl text-gray-600 dark: text-gray-200">หลักสูตรวิศวกรรมศาสตร์แบบบูรณาการ 5 ปี</p>
+            <div class="w-24 h-1.5 bg-gradient-to-r from-blue-600 to-orange-500 mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <!-- Program Overview -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl dark:shadow-2xl p-8 mb-10 transition-colors duration-300">
+            <h2 class="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-6 flex items-center">
+                <span class="w-2 h-8 bg-blue-600 dark:bg-blue-500 mr-3 rounded-full"></span>
+                ภาพรวมหลักสูตร
+            </h2>
+            <p class="text-gray-700 dark:text-gray-200 text-lg leading-relaxed mb-6">
+                หลักสูตร KOSEN เป็น<strong class="text-gray-900 dark:text-white">หลักสูตรแบบบูรณาการ 5 ปี</strong> (เทียบเท่า มัธยมศึกษาตอนปลาย 2 ปี + ปวส.   3 ปี) 
+                โดยเน้นการศึกษาวิศวกรรมเฉพาะทางที่เน้นทักษะการปฏิบัติและการเรียนรู้แบบโครงงาน
+            </p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="p-6 bg-blue-50 dark:bg-blue-900/30 rounded-xl border-l-4 border-blue-600 dark:border-blue-400">
+                    <h3 class="font-bold text-gray-800 dark:text-gray-100 text-lg mb-2">ระยะเวลา</h3>
+                    <p class="text-gray-600 dark:text-gray-200">5 ปี (10 ภาคการศึกษา)</p>
+                </div>
+                <div class="p-6 bg-orange-50 dark:bg-orange-900/30 rounded-xl border-l-4 border-orange-500 dark:border-orange-400">
+                    <h3 class="font-bold text-gray-800 dark:text-gray-100 text-lg mb-2">วุฒิการศึกษา</h3>
+                    <p class="text-gray-600 dark:text-gray-200">อนุปริญญาตรีสาขาวิศวกรรมศาสตร์</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Year Breakdown -->
+        <div class="space-y-6">
+            <!-- Year 1-2 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-2xl p-8 hover:shadow-2xl dark:hover:shadow-blue-900/50 transition-all">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mr-4 shadow-lg">
+                        1-2
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">ปีพื้นฐาน</h3>
+                        <p class="text-gray-600 dark:text-gray-200">วิทยาศาสตร์พื้นฐานและคณิตศาสตร์</p>
+                    </div>
+                </div>
+                <ul class="ml-20 space-y-3 text-gray-700 dark:text-gray-200">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 dark:text-blue-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">คณิตศาสตร์ (แคลคูลัส พีชคณิตเชิงเส้น สมการเชิงอนุพันธ์)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 dark:text-blue-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">ฟิสิกส์ (กลศาสตร์ ไฟฟ้าและแม่เหล็ก)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 dark:text-blue-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">เคมีและการเขียนโปรแกรมพื้นฐาน</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 dark:text-blue-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">ภาษาอังกฤษและภาษาญี่ปุ่น</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Year 3 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-2xl p-8 hover:shadow-2xl dark:hover:shadow-orange-900/50 transition-all">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 dark:from-orange-400 dark:to-orange-500 text-white rounded-2xl flex items-center justify-center font-black text-2xl mr-4 shadow-lg">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">วิศวกรรมหลัก</h3>
+                        <p class="text-gray-600 dark:text-gray-200">หลักการวิศวกรรมพื้นฐาน</p>
+                    </div>
+                </div>
+                <ul class="ml-20 space-y-3 text-gray-700 dark:text-gray-200">
+                    <li class="flex items-start">
+                        <span class="text-orange-500 dark:text-orange-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">กลศาสตร์วิศวกรรมและอุณหพลศาสตร์</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-orange-500 dark:text-orange-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">วงจรไฟฟ้าและอิเล็กทรอนิกส์</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-orange-500 dark:text-orange-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">วัสดุศาสตร์และ CAD</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-orange-500 dark:text-orange-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">การฝึกงานเชิงปฏิบัติในห้องปฏิบัติการ</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Year 4 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-2xl p-8 hover:shadow-2xl dark:hover:shadow-purple-900/50 transition-all">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-700 dark:from-purple-500 dark:to-purple-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mr-4 shadow-lg">
+                        4
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">ความเชี่ยวชาญเฉพาะด้าน</h3>
+                        <p class="text-gray-600 dark:text-gray-200">วิชาเทคนิคขั้นสูง</p>
+                    </div>
+                </div>
+                <ul class="ml-20 space-y-3 text-gray-700 dark:text-gray-200">
+                    <li class="flex items-start">
+                        <span class="text-purple-600 dark:text-purple-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">วิศวกรรมเฉพาะทาง (เครื่องกล/ไฟฟ้า/ระบบควบคุม)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 dark: text-purple-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">ไมโครโปรเซสเซอร์และระบบฝังตัว</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 dark: text-purple-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">ระบบอัตโนมัติและหุ่นยนต์</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-purple-600 dark:text-purple-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">ฝึกงานในอุตสาหกรรม (ภาคฤดูร้อน)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Year 5 -->
+            <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-2xl p-8 hover:shadow-2xl dark:hover:shadow-green-900/50 transition-all">
+                <div class="flex items-center mb-6">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-green-700 dark:from-green-500 dark:to-green-600 text-white rounded-2xl flex items-center justify-center font-black text-2xl mr-4 shadow-lg">
+                        5
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">ปีสุดท้าย</h3>
+                        <p class="text-gray-600 dark:text-gray-200">วิจัยและโครงงานจบการศึกษา</p>
+                    </div>
+                </div>
+                <ul class="ml-20 space-y-3 text-gray-700 dark:text-gray-200">
+                    <li class="flex items-start">
+                        <span class="text-green-600 dark:text-green-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">วิชาเลือกขั้นสูง</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 dark:text-green-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">โครงงานวิจัยจบการศึกษา (ตลอดปี)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 dark:text-green-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">โครงการร่วมกับอุตสาหกรรม</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-600 dark:text-green-400 mr-3 text-2xl">•</span>
+                        <span class="pt-1">การเขียนและนำเสนอบทความทางเทคนิค</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Highlights -->
+        <div class="mt-12 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-700 dark:to-purple-700 rounded-2xl shadow-2xl p-10 text-white">
+            <h2 class="text-3xl font-bold mb-8">จุดเด่นของหลักสูตร</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex items-start">
+                    <svg class="w-7 h-7 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-lg">ฝึกปฏิบัติในห้องแล็บทุกภาคการศึกษา</span>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-7 h-7 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-lg">ความร่วมมือกับอุตสาหกรรมและฝึกงาน</span>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-7 h-7 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-lg">การศึกษาภาษาและวัฒนธรรมญี่ปุ่น</span>
+                </div>
+                <div class="flex items-start">
+                    <svg class="w-7 h-7 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-lg">โปรแกรมแลกเปลี่ยนกับประเทศญี่ปุ่น</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Apply dark mode on load
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Listen for theme changes
+        window.addEventListener('message', (event) => {
+            if (event.data.type === 'themeChange') {
+                if (event.data.theme === 'dark') {
+                    document. documentElement.classList.add('dark');
+                } else {
+                    document.documentElement.classList. remove('dark');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,15 +1,76 @@
-<!doctype html>
+<! doctype html>
+<html lang="th">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/src/style.css" rel="stylesheet" />
 </head>
-<body>
-    <div class="min-w-full flex flex-row">
-        <div class="grow">
-            <button id="Index" class="p-4">Kosen kmitl</button>
+<body class="transition-colors duration-300">
+    <nav class="bg-white dark:bg-gray-900 border-b-2 border-gray-100 dark:border-gray-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <button id="Index" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-orange-500 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all">
+                        <span class="text-white font-bold text-xl">K</span>
+                    </div>
+                    <span class="text-2xl font-bold">
+                        <span class="text-blue-600 dark:text-blue-400">KOSEN</span> <span class="text-orange-500 dark:text-orange-400">KMITL</span>
+                    </span>
+                </button>
+                <div class="flex items-center gap-2">
+                    <button id="Structure" class="px-6 py-2.5 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 font-medium rounded-lg transition-all">
+                        หลักสูตร
+                    </button>
+                    <button id="Contact" class="px-6 py-2.5 text-gray-700 dark: text-gray-300 hover: text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 font-medium rounded-lg transition-all">
+                        ติดต่อ
+                    </button>
+                    <!-- Dark Mode Toggle -->
+                    <button id="themeToggle" class="ml-2 p-2.5 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all" aria-label="Toggle dark mode">
+                        <svg id="sunIcon" class="w-5 h-5 text-gray-700 dark:text-gray-300 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                        <svg id="moonIcon" class="w-5 h-5 text-gray-700 block dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        <div class="flex">
-            <button id="Structure" class="p-4">Structure</button>
-            <button id="Contact" class="p-4">Contact</button>
-        </div>
-    </div>
+    </nav>
+
+    <script>
+        // Dark mode toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+        
+        // Check for saved theme preference or default to light mode
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+            htmlElement.classList.add('dark');
+        }
+
+        themeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            htmlElement.classList.toggle('dark');
+            const theme = htmlElement.classList.contains('dark') ? 'dark' : 'light';
+            localStorage. setItem('theme', theme);
+            
+            // Notify parent window to update other iframes
+            window.parent.postMessage({ type: 'themeChange', theme: theme }, '*');
+        });
+
+        // Listen for theme changes from other iframes
+        window. addEventListener('message', (event) => {
+            if (event.data.type === 'themeChange') {
+                if (event. data.theme === 'dark') {
+                    htmlElement.classList.add('dark');
+                } else {
+                    htmlElement. classList.remove('dark');
+                }
+            }
+        });
+    </script>
 </body>
+</html>
