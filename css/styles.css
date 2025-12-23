@@ -1,0 +1,203 @@
+/* KOSEN-KMITL Mini-Site Styles */
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header Styles */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #0055aa;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+/* Class-based Styles for Requirements */
+.warning {
+    background-color: #fff3cd;
+    border-left: 4px solid #ff9800;
+    padding: 15px;
+    margin: 20px 0;
+    color: #856404;
+}
+
+.highlight {
+    background-color: #e7f3ff;
+    border-left: 4px solid #2196F3;
+    padding: 15px;
+    margin: 20px 0;
+    color: #004085;
+}
+
+.important {
+    background-color: #f8d7da;
+    border-left: 4px solid #dc3545;
+    padding: 15px;
+    margin: 20px 0;
+    color: #721c24;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+    padding: 15px;
+    margin: 20px 0;
+    color: #155724;
+}
+
+.info {
+    background-color: #d1ecf1;
+    border-left: 4px solid #17a2b8;
+    padding: 15px;
+    margin: 20px 0;
+    color: #0c5460;
+}
+
+/* Content Sections */
+.section {
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.section h2 {
+    color: #003366;
+    border-bottom: 2px solid #0055aa;
+    padding-bottom: 10px;
+}
+
+/* Image Styles */
+.program-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0055aa;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: #003366;
+}
+
+/* Course List Styles */
+.course-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.course-list li {
+    background-color: #f8f9fa;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 3px solid #0055aa;
+}
+
+/* Contact Links */
+.contact-links {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-links li {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.contact-links a {
+    color: #0055aa;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.contact-links a:hover {
+    color: #003366;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
